@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Coletor de Vagas LinkedIn",
+  "version": "1.1.0",
+  "description": "Coleta as vagas de todas as seções do LinkedIn Jobs e exporta em Markdown/JSON/CSV para usar com IA.",
+  "permissions": ["storage", "unlimitedStorage", "scripting", "tabs", "nativeMessaging"],
+  "host_permissions": ["https://www.linkedin.com/*", "http://localhost:3777/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Abrir coletor de vagas" }
+}

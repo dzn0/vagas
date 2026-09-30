@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Coletor de Vagas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Coletor de Vagas LinkedIn</h1>
+      <p class="muted">Deixe esta aba aberta durante a coleta. É preciso estar logado no LinkedIn neste navegador.</p>
+    </div>
+    <div id="stats" class="stats"></div>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="card-head">
+        <h2>Seções</h2>
+        <div class="row">
+          <button id="discover">Descobrir seções no LinkedIn</button>
+          <button id="resetSections" class="ghost">Restaurar padrão</button>
+        </div>
+      </div>
+      <ul id="sections" class="sections"></ul>
+      <form id="addSection" class="row add">
+        <input id="newName" placeholder="Nome (ex.: Busca React remoto)" required>
+        <input id="newUrl" type="url" placeholder="URL de uma busca ou coleção do LinkedIn" required>
+        <button type="submit" class="ghost">Adicionar</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Coleta</h2>
+      <div class="row settings">
+        <label>Máx. de páginas por seção <input id="maxPages" type="number" min="1" max="100"></label>
+        <label>Intervalo entre ações (ms) <input id="delayMs" type="number" min="500" step="100"></label>
+        <label class="check"><input id="fetchDetails" type="checkbox"> Buscar descrição completa de cada vaga</label>
+      </div>
+      <div class="row">
+        <button id="startAll" class="primary">Coletar todas as seções marcadas</button>
+        <button id="startDetails">Só buscar descrições pendentes</button>
+        <button id="stop" class="danger" disabled>Parar</button>
+        <span class="spacer"></span>
+        <button id="diagnose" class="ghost">Diagnosticar 1ª seção marcada</button>
+      </div>
+      <div class="progress"><div id="bar"></div></div>
+      <p id="progressText" class="muted"></p>
+      <ol id="log" class="log"></ol>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Vagas</h2>
+        <input id="filter" type="search" placeholder="Filtrar por título, empresa, local, seção…">
+      </div>
+      <div class="row">
+        <button id="copyMd" class="primary">Copiar Markdown</button>
+        <button id="dlMd">Baixar .md</button>
+        <button id="dlJson">Baixar .json</button>
+        <button id="dlCsv">Baixar .csv</button>
+        <label class="check"><input id="includeDesc" type="checkbox" checked> Incluir descrições</label>
+        <span class="spacer"></span>
+        <button id="copyTriage" class="primary">Copiar triagem do banco</button>
+        <button id="syncAll" class="ghost">Enviar tudo ao banco</button>
+        <button id="retryErrors" class="ghost">Tentar de novo as com erro</button>
+        <button id="clearJobs" class="ghost danger-text">Limpar lista local</button>
+      </div>
+      <p class="muted">A exportação usa as vagas que aparecem no filtro atual.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Vaga</th><th>Empresa</th><th>Local</th><th>Seções</th><th>Descrição</th><th></th></tr></thead>
+          <tbody id="jobs"></tbody>
+        </table>
+      </div>
+      <p id="tableNote" class="muted"></p>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

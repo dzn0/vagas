@@ -1,0 +1,123 @@
+{
+  "title": "Mundo visual da página de vagas",
+  "question": "O sorteio escolheu a Agência de Triagem. Fique com ela, troque por uma alternativa ou sorteie de novo.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Agência de Triagem",
+      "kicker": "THE ROLL",
+      "lineage": "salão de triagem dos correios: escaninhos, carimbos e rastreamento de objeto",
+      "thesis": "Cada candidatura é um objeto postado e rastreado; você tria, carimba e cobra quem não respondeu.",
+      "palette": ["#E6EBE8", "#1D2826", "#8E9C98", "#F0BE2E", "#1F4FA8", "#C7372C"],
+      "materials": ["esmalte de metal das estantes", "tinta de carimbo", "etiqueta de registro", "borda de correio aéreo"],
+      "viewport": "À esquerda, um rack de escaninhos (status) com contagens; no centro, a mesa de triagem com as vagas em linhas, a nota da IA como carimbo circular; à direita, a vaga aberta como carta com o rastreamento.",
+      "risk": "Vira fantasia se o carimbo e o envelope forem enfeite em vez de controle; toda metáfora precisa ser um botão ou um estado real.",
+      "raised": [
+        { "from": "challenger-arcade", "raise": "Cada status tem uma tinta só, por lei: amarelo de registro = forte, azul aéreo = aplicada, vermelho = cobrar retorno; nenhuma cor aparece sem significar status." },
+        { "from": "challenger-nixie", "raise": "Mudar o status é um evento físico visível: o carimbo desce na linha e a contagem do escaninho rola." },
+        { "from": "challenger-civic", "raise": "Uma família tipográfica, dois pesos; toda a cor da página é gasta nos carimbos e etiquetas." },
+        { "from": "challenger-dive", "raise": "O rastreamento de cada candidatura corre num único eixo vertical, da coleta até a resposta." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Carteira de Trabalho",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "a carteira azul de trabalho: páginas de contrato, guilhoché e carimbos de admissão",
+      "thesis": "A busca do primeiro emprego como a carteira esperando a primeira assinatura.",
+      "palette": ["#1C2F5E", "#E4EDE1", "#5B3A8C", "#B08A3E"],
+      "materials": ["papel de segurança com guilhoché", "capa azul gofrada", "carimbo violeta"],
+      "viewport": "Uma página dupla aberta: à esquerda as vagas como linhas de contrato em branco, à direita a vaga selecionada como página a ser carimbada.",
+      "risk": "Muito próxima de um documento oficial; o ritmo de livro limita a densidade de uma lista longa."
+    },
+    {
+      "id": "challenger-arcade",
+      "label": "Tela de fliperama CRT",
+      "verdict": "declined",
+      "lineage": "gabinete de arcade com pixels e scanlines",
+      "thesis": "Vagas como fases; status como troca de sprite.",
+      "palette": ["#07070C", "#F6D13B", "#35C2F0", "#E2435B"],
+      "materials": ["pixel 8x8", "brilho de fósforo"],
+      "viewport": "Placar no topo, vagas como tiles.",
+      "case": "Descrições longas em fonte de pixel ficam ilegíveis; a clareza perde.",
+      "risk": "Novidade retrô que cansa em uso diário.",
+      "kept": "Disciplina de paleta: cada estado tem uma cor fixa, por lei."
+    },
+    {
+      "id": "challenger-nixie",
+      "label": "Contador Nixie",
+      "verdict": "declined",
+      "lineage": "contadores de laboratório com tubos de neon",
+      "thesis": "Contagens do funil como tubos acesos.",
+      "palette": ["#141414", "#FF7A1A", "#6C6C6C"],
+      "materials": ["vidro", "aço escurecido"],
+      "viewport": "Bancos de tubos com os números do funil.",
+      "case": "Bom para números, ruim para ler e decidir vaga por vaga.",
+      "risk": "Instrumento sem lista.",
+      "kept": "Mudança de valor como evento físico visível."
+    },
+    {
+      "id": "challenger-civic",
+      "label": "Prospecto institucional",
+      "verdict": "declined",
+      "lineage": "prospecto corporativo tardo-moderno",
+      "thesis": "Branco total e uma única fita de cor.",
+      "palette": ["#F7F7FA", "#1B1547", "#6B5CE7"],
+      "materials": ["fita renderizada", "fios cinza"],
+      "viewport": "Fita de luz à direita, texto à esquerda.",
+      "case": "Linguagem de vitrine; não é uma ferramenta de triagem.",
+      "risk": "Parece landing page.",
+      "kept": "Um tipo em dois pesos e toda a cor gasta num só lugar."
+    },
+    {
+      "id": "challenger-dive",
+      "label": "Mergulho técnico",
+      "verdict": "declined",
+      "lineage": "perfil de mergulho em parede vulcânica",
+      "thesis": "Profundidade como etapa do funil.",
+      "palette": ["#06203A", "#3FD0E0", "#F2F4F2"],
+      "materials": ["neve marinha", "dígitos de computador de mergulho"],
+      "viewport": "Eixo vertical de profundidade com as vagas.",
+      "case": "Metáfora distante da busca de emprego.",
+      "risk": "Atmosfera no lugar de tarefa.",
+      "kept": "Um único eixo vertical organiza cada linha do tempo."
+    },
+    {
+      "id": "challenger-sleeve",
+      "label": "Capa de disco yé-yé",
+      "verdict": "declined",
+      "lineage": "capa de pop francês dos anos 60",
+      "thesis": "Um fundo chapado por lançamento.",
+      "palette": ["#F2762E", "#2BB3B1", "#FFFFFF"],
+      "materials": ["cor chapada", "retrato recortado"],
+      "viewport": "Fundo chapado com quatro faixas no canto.",
+      "case": "Conjunto fechado de quatro itens; não aguenta centenas de vagas.",
+      "risk": "Decorativo.",
+      "kept": "Uma cor chapada dona de uma região inteira."
+    },
+    {
+      "id": "challenger-quarry",
+      "label": "Pedreira de nuvens",
+      "verdict": "declined",
+      "lineage": "mundo surreal de blocos de clima",
+      "thesis": "Cortar e montar blocos de nuvem.",
+      "palette": ["#F4F6F8", "#5AA7E0", "#6B7480"],
+      "materials": ["nuvem volumétrica", "estêncil industrial"],
+      "viewport": "Falésia de nuvem com blocos cortados.",
+      "case": "Sem relação com vagas; perde nos dois eixos.",
+      "risk": "Pura atmosfera.",
+      "kept": "Nada além do estêncil nos números."
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "canon": true,
+  "canonCard": {
+    "label": "O padrão da categoria",
+    "thesis": "Um painel de candidaturas no estilo ATS/Kanban, bem executado.",
+    "palette": ["#FFFFFF", "#111827", "#2563EB"],
+    "materials": ["grade limpa", "cartões com sombra leve"],
+    "viewport": "Barra de filtros no topo, tabela ou colunas Kanban por status, painel lateral com a vaga.",
+    "risk": "Igual a qualquer outro painel, por definição."
+  },
+  "steer": true
+}

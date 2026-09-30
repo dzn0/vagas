@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vagas</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6.5' fill='none' stroke='%231a7f37' stroke-width='1.5'/%3E%3Ccircle cx='8' cy='8' r='1.5' fill='%231a7f37'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="app.css">
+  <script>
+    try { const t = localStorage.getItem('vagas-theme'); if (t) document.documentElement.dataset.theme = t; } catch {}
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <h1 class="brand"><span class="brand-icon" data-icon="briefcase"></span>Vagas</h1>
+      <p class="topbar-meta" id="meta" aria-live="polite"></p>
+      <div class="topbar-actions">
+        <button class="btn btn-invisible btn-icon" id="refresh" type="button" title="Recarregar do banco (R)" aria-label="Recarregar do banco"><span data-icon="sync"></span></button>
+        <button class="btn btn-invisible btn-icon" id="theme" type="button" title="Tema claro/escuro" aria-label="Alternar tema"><span class="theme-glyph"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout" id="layout">
+    <main class="main">
+      <div class="subnav">
+        <label class="search">
+          <span data-icon="search"></span>
+          <input id="q" type="search" placeholder="Filtrar por título, empresa, cidade ou tecnologia" autocomplete="off" spellcheck="false" aria-label="Filtrar vagas">
+          <kbd>/</kbd>
+        </label>
+        <div class="segmented" role="group" aria-label="Visualização">
+          <button type="button" class="seg" data-view="list" aria-pressed="true"><span data-icon="list-unordered"></span>Lista</button>
+          <button type="button" class="seg" data-view="board" aria-pressed="false"><span data-icon="project"></span>Quadro</button>
+        </div>
+      </div>
+
+      <div class="followup" id="followup" hidden></div>
+
+      <section class="box" id="listBox" aria-label="Vagas">
+        <div class="box-header" id="boxHeader">
+          <label class="check header-check" title="Marcar todas desta aba"><input type="checkbox" id="selectAll" aria-label="Marcar todas as vagas desta aba"></label>
+          <div class="tabs" id="tabs" role="tablist"></div>
+          <div class="filters" id="filters"></div>
+        </div>
+        <div class="bulkbar" id="bulkbar" hidden>
+          <label class="check"><input type="checkbox" id="bulkAll" aria-label="Marcar todas as vagas desta aba"></label>
+          <strong id="bulkCount"></strong>
+          <span class="bulk-spacer"></span>
+          <button class="btn btn-sm" type="button" id="bulkStatus">Marcar como <span data-icon="triangle-down"></span></button>
+          <button class="btn btn-sm btn-invisible" type="button" id="bulkClear">Limpar seleção</button>
+        </div>
+        <ul class="rows" id="rows" role="listbox" aria-label="Lista de vagas"></ul>
+        <div class="blank" id="blank" hidden></div>
+        <button class="more" id="more" type="button" hidden></button>
+      </section>
+
+      <section class="board" id="board" hidden aria-label="Quadro por status"></section>
+    </main>
+
+    <aside class="panel" id="panel" hidden aria-label="Vaga selecionada"></aside>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

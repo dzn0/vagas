@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-23T14:00:00-03:00",
+  "title": "Design System: Vagas",
+  "extensions": {
+    "themes": {
+      "mechanism": "Light values on :root; dark values via @media (prefers-color-scheme: dark) on :root:not([data-theme=\"light\"]) and on :root[data-theme=\"dark\"]. The override is persisted in localStorage key 'vagas-theme'.",
+      "source": "server/public/app.css"
+    },
+    "colorMeta": {
+      "canvas": { "role": "neutral", "displayName": "Canvas White", "dark": "#0d1117", "tonalRamp": ["#1f2328", "#24292f", "#32383f", "#424a53", "#59636e", "#818b98", "#d1d9e0", "#ffffff"] },
+      "canvas-subtle": { "role": "neutral", "displayName": "Canvas Subtle", "dark": "#151b23", "tonalRamp": ["#1f2328", "#24292f", "#32383f", "#424a53", "#59636e", "#818b98", "#d1d9e0", "#f6f8fa"] },
+      "canvas-inset": { "role": "neutral", "displayName": "Canvas Inset", "dark": "#010409", "tonalRamp": ["#1f2328", "#24292f", "#32383f", "#424a53", "#59636e", "#818b98", "#d1d9e0", "#f6f8fa"] },
+      "canvas-overlay": { "role": "neutral", "displayName": "Overlay Canvas", "dark": "#151b23", "tonalRamp": ["#1f2328", "#24292f", "#32383f", "#424a53", "#59636e", "#818b98", "#d1d9e0", "#ffffff"] },
+      "fg": { "role": "neutral", "displayName": "Ink", "dark": "#f0f6fc", "tonalRamp": ["#1f2328", "#24292f", "#32383f", "#424a53", "#59636e", "#818b98", "#d1d9e0", "#f6f8fa"] },
+      "fg-muted": { "role": "neutral", "displayName": "Muted Slate", "dark": "#9198a1", "tonalRamp": ["#1f2328", "#24292f", "#32383f", "#424a53", "#59636e", "#818b98", "#d1d9e0", "#f6f8fa"] },
+      "border": { "role": "neutral", "displayName": "Hairline", "dark": "#3d444d", "tonalRamp": ["#1f2328", "#24292f", "#32383f", "#424a53", "#59636e", "#818b98", "#d1d9e0", "#f6f8fa"] },
+      "border-muted": { "role": "neutral", "displayName": "Muted Hairline", "dark": "#3d444db3" },
+      "accent": { "role": "primary", "displayName": "Primer Link Blue", "dark": "#4493f8", "tonalRamp": ["#0a3069", "#0550ae", "#0969da", "#218bff", "#54aeff", "#80ccff", "#b6e3ff", "#ddf4ff"] },
+      "accent-subtle": { "role": "primary", "displayName": "Link Blue Wash", "dark": "#388bfd1a" },
+      "primary-bg": { "role": "primary", "displayName": "Merge Green", "dark": "#238636", "tonalRamp": ["#003d16", "#044f1e", "#116329", "#1a7f37", "#1f883d", "#2da44e", "#4ac26b", "#aceebb"] },
+      "primary-hover": { "role": "primary", "displayName": "Merge Green Hover", "dark": "#29903b" },
+      "primary-fg": { "role": "primary", "displayName": "On Primary", "dark": "#ffffff" },
+      "success": { "role": "secondary", "displayName": "Issue-Open Green", "dark": "#3fb950", "tonalRamp": ["#003d16", "#044f1e", "#116329", "#1a7f37", "#2da44e", "#4ac26b", "#6fdd8b", "#dafbe1"] },
+      "success-subtle": { "role": "secondary", "displayName": "Open Green Wash", "dark": "#2ea04326" },
+      "attention": { "role": "secondary", "displayName": "Attention Ochre", "dark": "#d29922", "tonalRamp": ["#3b2300", "#4d2d00", "#633c01", "#7d4e00", "#9a6700", "#bf8700", "#d4a72c", "#fff8c5"] },
+      "attention-subtle": { "role": "secondary", "displayName": "Attention Wash", "dark": "#bb800926" },
+      "done": { "role": "secondary", "displayName": "Done Purple", "dark": "#ab7df8", "tonalRamp": ["#3e1f79", "#512a97", "#6639ba", "#8250df", "#a475f9", "#c297ff", "#d8b9ff", "#fbefff"] },
+      "done-subtle": { "role": "secondary", "displayName": "Done Wash", "dark": "#ab7df826" },
+      "danger": { "role": "secondary", "displayName": "Danger Red", "dark": "#f85149", "tonalRamp": ["#660018", "#82071e", "#a40e26", "#d1242f", "#fa4549", "#ff8182", "#ffaba8", "#ffebe9"] },
+      "danger-subtle": { "role": "secondary", "displayName": "Danger Wash", "dark": "#f851491a" },
+      "severe": { "role": "secondary", "displayName": "Severe Orange", "dark": "#db6d28", "tonalRamp": ["#471700", "#5c1e00", "#762c00", "#953800", "#bc4c00", "#e16f24", "#fb8f44", "#fff1e5"] },
+      "severe-subtle": { "role": "secondary", "displayName": "Severe Wash", "dark": "#db6d281a" },
+      "neutral-subtle": { "role": "neutral", "displayName": "Neutral Wash", "dark": "#656c7633" },
+      "row-hover": { "role": "neutral", "displayName": "Row Hover", "dark": "#151b23" },
+      "row-active": { "role": "primary", "displayName": "Row Selected", "dark": "#388bfd1a" },
+      "btn-bg": { "role": "neutral", "displayName": "Button Fill", "dark": "#212830" },
+      "btn-hover": { "role": "neutral", "displayName": "Button Hover", "dark": "#262c36" },
+      "focus": { "role": "primary", "displayName": "Focus Blue", "dark": "#1f6feb" }
+    },
+    "typographyMeta": {
+      "title": { "displayName": "Title", "purpose": "Open job title in the side panel; empty-state heading." },
+      "headline": { "displayName": "Headline", "purpose": "Row titles (15px on mobile), scores, brand name." },
+      "body": { "displayName": "Body", "purpose": "Default text; section heads at 600; descriptions at 1.6 line-height, 75ch max." },
+      "body-small": { "displayName": "Body Small", "purpose": "Top-bar meta, row AI summary, field grids, segmented control." },
+      "label": { "displayName": "Label", "purpose": "Labels, counts, row meta, captions, menu titles, list sub-heads. Sentence case." },
+      "mono": { "displayName": "Mono", "purpose": "Job IDs; kbd hints at 11px." }
+    },
+    "shadows": [
+      { "name": "overlay", "value": "0 1px 3px #1f232812, 0 8px 24px #42474e2e", "dark": "0 0 0 1px #3d444d, 0 8px 24px #010409", "purpose": "Menus, toasts, and the side panel as a drawer below 1012px. Nothing else." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Entrance easing for panel, menus and toasts." },
+      { "name": "panel-in", "value": "180ms, from opacity 0 translateX(12px)", "purpose": "Side panel opening." },
+      { "name": "menu-in", "value": "120ms, from opacity 0 translateY(-4px) scale(.98)", "purpose": "Menu drop-in." },
+      { "name": "toast-in", "value": "200ms, from opacity 0 translateY(8px)", "purpose": "Toast rise." },
+      { "name": "state-change", "value": "120ms ease-out", "purpose": "Button background and card border transitions." },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "All animation and transition durations under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "drawer", "value": "1011px", "purpose": "At or below: side panel becomes a fixed overlay drawer." },
+      { "name": "mobile", "value": "767px", "purpose": "At or below: wrapped top bar, 16px padding, no row checkboxes or summaries, short button labels, full-width panel." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Default Button",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "Primer default button; the everyday action, including the status button.",
+      "html": "<button class=\"ds-btn\"><svg class=\"ds-octicon\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z\"></path><path d=\"M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z\"></path></svg>Nova</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; font: 500 14px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; color: var(--fg, #1f2328); background: var(--btn-bg, #f6f8fa); border: 1px solid var(--btn-border, #d1d9e0); border-radius: 6px; cursor: pointer; transition: background-color .12s ease-out; } .ds-btn:hover { background: var(--btn-hover, #eff2f5); } .ds-btn:focus-visible { outline: 2px solid var(--focus, #0969da); outline-offset: -2px; } .ds-octicon { width: 16px; height: 16px; fill: var(--success, #1a7f37); }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Merge-green primary action; one per panel.",
+      "html": "<button class=\"ds-btn-primary\">Marquei que me candidatei</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; height: 32px; padding: 0 12px; font: 500 14px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; color: #fff; background: var(--primary-bg, #1f883d); border: 1px solid #1f232826; border-radius: 6px; cursor: pointer; transition: background-color .12s ease-out; } .ds-btn-primary:hover { background: var(--primary-hover, #1c8139); } .ds-btn-primary:focus-visible { outline: 2px solid var(--focus, #0969da); outline-offset: -2px; }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Descartar only: red text at rest, red fill on hover.",
+      "html": "<button class=\"ds-btn-danger\">Descartar</button>",
+      "css": ".ds-btn-danger { display: inline-flex; align-items: center; height: 32px; padding: 0 12px; font: 500 14px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; color: var(--danger, #d1242f); background: var(--btn-bg, #f6f8fa); border: 1px solid var(--btn-border, #d1d9e0); border-radius: 6px; cursor: pointer; transition: background-color .12s ease-out; } .ds-btn-danger:hover { background: var(--danger, #d1242f); border-color: var(--danger, #d1242f); color: #fff; } .ds-btn-danger:focus-visible { outline: 2px solid var(--focus, #0969da); outline-offset: -2px; }"
+    },
+    {
+      "name": "Search Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Inset search field with leading icon and slash shortcut hint.",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z\"></path></svg><input type=\"search\" placeholder=\"Filtrar por título, empresa, cidade ou tecnologia\"><kbd>/</kbd></label>",
+      "css": ".ds-search { display: flex; align-items: center; gap: 8px; height: 32px; padding: 0 8px 0 10px; background: var(--canvas-inset, #f6f8fa); border: 1px solid var(--border, #d1d9e0); border-radius: 6px; color: var(--fg-muted, #59636e); font: 14px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; } .ds-search:focus-within { border-color: var(--focus, #0969da); outline: 1px solid var(--focus, #0969da); background: var(--canvas, #fff); } .ds-search svg { width: 16px; height: 16px; fill: currentColor; } .ds-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--fg, #1f2328); font: inherit; } .ds-search kbd { font: 11px/1 ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; padding: 3px 5px; border: 1px solid var(--border, #d1d9e0); border-bottom-width: 2px; border-radius: 6px; background: var(--canvas-subtle, #f6f8fa); }"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "nav",
+      "refersTo": "segmented-item",
+      "description": "Primer SegmentedControl: List/Board toggle in a 2px-inset track.",
+      "html": "<div class=\"ds-seg-track\" role=\"group\"><button class=\"ds-seg\" aria-pressed=\"true\">Lista</button><button class=\"ds-seg\" aria-pressed=\"false\">Quadro</button></div>",
+      "css": ".ds-seg-track { display: inline-flex; padding: 2px; background: var(--canvas-subtle, #f6f8fa); border: 1px solid var(--border, #d1d9e0); border-radius: 6px; } .ds-seg { height: 26px; padding: 0 10px; font: 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; color: var(--fg-muted, #59636e); background: transparent; border: 1px solid transparent; border-radius: 5px; cursor: pointer; } .ds-seg:hover { color: var(--fg, #1f2328); } .ds-seg[aria-pressed=\"true\"] { background: var(--canvas, #fff); color: var(--fg, #1f2328); border-color: var(--border, #d1d9e0); font-weight: 600; } .ds-seg:focus-visible { outline: 2px solid var(--focus, #0969da); outline-offset: -2px; }"
+    },
+    {
+      "name": "Labels",
+      "kind": "chip",
+      "refersTo": "label-success",
+      "description": "Verdict and attribute pills: forte = success, avaliar = attention, the rest outline.",
+      "html": "<span class=\"ds-label ds-label-success\">Forte</span> <span class=\"ds-label ds-label-attention\">Avaliar</span> <span class=\"ds-label ds-label-outline\">Remoto</span>",
+      "css": ".ds-label { display: inline-flex; align-items: center; height: 20px; padding: 0 7px; font: 500 12px/18px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; border: 1px solid transparent; border-radius: 2em; white-space: nowrap; } .ds-label-success { background: var(--success-subtle, #dafbe1); color: var(--success, #1a7f37); border-color: color-mix(in srgb, var(--success, #1a7f37) 35%, transparent); } .ds-label-attention { background: var(--attention-subtle, #fff8c5); color: var(--attention, #9a6700); border-color: color-mix(in srgb, var(--attention, #9a6700) 35%, transparent); } .ds-label-outline { border-color: var(--border, #d1d9e0); color: var(--fg-muted, #59636e); }"
+    },
+    {
+      "name": "Job Row",
+      "kind": "custom",
+      "refersTo": "list-row",
+      "description": "Issue-style list row: state icon, title with labels, meta line, score at right.",
+      "html": "<div class=\"ds-row\"><svg class=\"ds-state\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z\"></path><path d=\"M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z\"></path></svg><div><span class=\"ds-row-title\">Desenvolvedor Front-end Júnior</span><div class=\"ds-row-meta\">Empresa · São Paulo · há 2 dias</div></div><span class=\"ds-score\">86</span></div>",
+      "css": ".ds-row { display: grid; grid-template-columns: 16px minmax(0, 1fr) auto; gap: 0 12px; align-items: start; padding: 10px 16px; border-top: 1px solid var(--border-muted, #d1d9e0b3); background: var(--canvas, #fff); font: 14px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; font-variant-numeric: tabular-nums; cursor: pointer; } .ds-row:hover { background: var(--row-hover, #f6f8fa); } .ds-row:hover .ds-row-title { color: var(--accent, #0969da); } .ds-row:focus-visible { outline: 2px solid var(--focus, #0969da); outline-offset: -2px; } .ds-state { width: 16px; height: 16px; margin-top: 4px; fill: var(--success, #1a7f37); } .ds-row-title { font-size: 16px; font-weight: 600; color: var(--fg, #1f2328); } .ds-row-meta { margin-top: 2px; font-size: 12px; color: var(--fg-muted, #59636e); } .ds-score { font-size: 16px; font-weight: 600; color: var(--success, #1a7f37); }"
+    },
+    {
+      "name": "Board Card",
+      "kind": "card",
+      "refersTo": "board-card",
+      "description": "Draggable card in a status column of the board view.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-title\">Desenvolvedor Front-end Júnior</div><div class=\"ds-card-meta\">Empresa · Remoto</div></div>",
+      "css": ".ds-card { padding: 8px 10px; background: var(--canvas, #fff); border: 1px solid var(--border, #d1d9e0); border-radius: 6px; cursor: grab; font: 14px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; transition: border-color .12s ease-out; } .ds-card:hover { border-color: color-mix(in srgb, var(--fg-muted, #59636e) 50%, var(--border, #d1d9e0)); } .ds-card:focus-visible { outline: 2px solid var(--focus, #0969da); outline-offset: -2px; } .ds-card-title { font-weight: 600; line-height: 1.4; color: var(--fg, #1f2328); } .ds-card-meta { margin-top: 4px; font-size: 12px; color: var(--fg-muted, #59636e); }"
+    },
+    {
+      "name": "Menu",
+      "kind": "custom",
+      "refersTo": "menu",
+      "description": "Overlay select menu with check tick and trailing count; one of the only shadowed elements.",
+      "html": "<div class=\"ds-menu\" role=\"menu\"><div class=\"ds-menu-title\">Status</div><button class=\"ds-menu-item\" role=\"menuitemradio\" aria-checked=\"true\">Nova<span class=\"ds-n\">42</span></button><button class=\"ds-menu-item\" role=\"menuitemradio\" aria-checked=\"false\">Aplicada<span class=\"ds-n\">46</span></button></div>",
+      "css": ".ds-menu { min-width: 220px; padding: 8px 0; background: var(--canvas-overlay, #fff); border: 1px solid var(--border, #d1d9e0); border-radius: 12px; box-shadow: var(--shadow-overlay, 0 1px 3px #1f232812, 0 8px 24px #42474e2e); font: 14px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; } .ds-menu-title { padding: 4px 16px 8px; font-size: 12px; font-weight: 600; color: var(--fg-muted, #59636e); } .ds-menu-item { display: flex; align-items: center; gap: 8px; width: calc(100% - 16px); margin: 0 8px; padding: 6px 8px; font: inherit; text-align: left; color: var(--fg, #1f2328); background: none; border: 0; border-radius: 6px; cursor: pointer; } .ds-menu-item:hover, .ds-menu-item:focus-visible { background: var(--neutral-subtle, #818b981f); outline: 0; } .ds-menu-item[aria-checked=\"true\"] { font-weight: 600; } .ds-n { margin-left: auto; font-size: 12px; color: var(--fg-muted, #59636e); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Issue Tracker, Played Straight",
+    "overview": "Vagas is GitHub Issues/Projects rendered in Primer, with no metaphor laid over it. The user chose the category standard deliberately: every job is an issue, every status is an issue state, the AI verdict is a label, and the list is the product. Nothing on the page is decoration; a color, icon or border exists because Primer would put it there and because it carries a state.\n\nThe surface is dense and quiet. Neutral canvases and 1px borders carry the structure; hue appears only in state icons, labels, scores and the one blue for links and focus. Light and dark themes follow the OS through `prefers-color-scheme` and can be pinned with a `data-theme` override on the root, both using Primer's own values. Motion is brief and functional: panels slide in, menus drop in, toasts rise, and all of it collapses under `prefers-reduced-motion`.\n\nRejected by the user during the world choice: the metaphorical worlds (post-office sorting hall, work-booklet, arcade and the rest). The category's conventions stay as GitHub ships them.",
+    "keyCharacteristics": [
+      "Primer neutrals, light and dark, with a `data-theme` override.",
+      "Status and verdict colors live only in state icons, labels and scores.",
+      "System UI stack at 14px with tabular numerals throughout.",
+      "6px radius, 1px borders, flat surfaces; shadows only on overlays.",
+      "Octicons 16px, `currentColor`, as the only icon set."
+    ],
+    "rules": [
+      { "name": "The Status Color Law", "body": "Status colors map to GitHub issue semantics and never drift: `nova` = success green (issue-opened), `interessante` = attention yellow (star), `aplicada` = done purple (check-circle), `entrevista` = accent blue (comment-discussion), `encerrada` = muted gray (issue-closed), `descartada` = muted gray (skip). AI verdicts: `forte` = success label, `avaliar` = attention label, everything else (`fila`, `descartar`, `sem`) = outline label.", "section": "colors" },
+      { "name": "The Not-Planned Rule", "body": "Descartada is gray, like GitHub's \"closed as not planned\": discarding is archiving, not an error. Red is reserved for the Descartar button and for errors.", "section": "colors" },
+      { "name": "The Labels-Only Rule", "body": "Semantic hue appears only as a state icon, a label, a score, or a banner tint. Surfaces, headers and columns stay neutral.", "section": "colors" },
+      { "name": "The Tabular Rule", "body": "`font-variant-numeric: tabular-nums` is set on the body; every score, count and date aligns in columns.", "section": "typography" },
+      { "name": "The Sentence-Case Rule", "body": "Labels, tabs, headings and sub-heads are sentence case in pt-BR. No uppercase tracking.", "section": "typography" },
+      { "name": "The Overlay-Only Rule", "body": "A shadow means \"this floats\". Rows, cards, boxes, columns and buttons never carry one; hover is shown by fill or border change.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** follow the Status Color Law exactly; a new status gets a GitHub-meaningful Octicon and one semantic hue.",
+      "**Do** keep Descartada gray and reserve `danger` red for the Descartar button and errors.",
+      "**Do** read every color from the custom properties so light, dark and the `data-theme` override stay in sync.",
+      "**Do** use Octicons at 16px with `fill: currentColor` for every icon.",
+      "**Do** keep surfaces flat with 1px borders and 6px radius; shadows go on menus, toasts and drawers only.",
+      "**Do** use the system UI stack at 14px with tabular numerals."
+    ],
+    "donts": [
+      "**Don't** put semantic hue on surfaces, headers or columns; it belongs in icons, labels, scores and banners.",
+      "**Don't** add a metaphor, custom display face or decorative illustration; the category standard is the chosen world.",
+      "**Don't** hard-code colors that bypass the theme variables.",
+      "**Don't** use a shadow to show hover or selection on rows, cards or buttons."
+    ]
+  }
+}
